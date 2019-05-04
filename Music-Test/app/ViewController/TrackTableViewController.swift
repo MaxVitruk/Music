@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TrackTableViewController.swift
 //  Music-Test
 //
 //  Created by Max Vitruk on 5/4/19.
@@ -8,25 +8,24 @@
 
 import UIKit
 
-class UserViewController: UITableViewController {
+class TrackTableViewController: UITableViewController {
+    private var trackCellName : String { return "track_cell" }
     
-    private var userCellName : String { return "user_cell" }
-    
-    var users : [User] = [] {
+    var tracks : [Track] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        networking.requestUser { [weak self] result in
+        networking.requestTracks { result in
             switch result {
-            case .success(let users):
-                self?.users = users.sorted(by: { $0.score > $1.score })
+            case .success(let tracks):
+                self.tracks = tracks
             case .failure(let error):
                 print("Error = " + error.localizedDescription)
             }
@@ -36,16 +35,15 @@ class UserViewController: UITableViewController {
 
 
 //Mark: - Table View Datasource
-extension UserViewController {
+extension TrackTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let user = users[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: userCellName) as! UserCell
-        cell.set(user: user)
+        let track = tracks[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: trackCellName) as! TrackCell
+        cell.set(track: track)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return tracks.count
     }
 }
-
