@@ -1,0 +1,65 @@
+Pods/Manifest.lock
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/AFResult.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/AlamofireExtended.swift
+Pods/Alamofire/Source/CachedResponseHandler.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/EventMonitor.swift
+Pods/Alamofire/Source/HTTPHeaders.swift
+Pods/Alamofire/Source/HTTPMethod.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/MultipartUpload.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/OperationQueue+Alamofire.swift
+Pods/Alamofire/Source/ParameterEncoder.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Protector.swift
+Pods/Alamofire/Source/RedirectHandler.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/RequestInterceptor.swift
+Pods/Alamofire/Source/RequestTaskMap.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/RetryPolicy.swift
+Pods/Alamofire/Source/ServerTrustEvaluation.swift
+Pods/Alamofire/Source/Session.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift
+Pods/Alamofire/Source/URLRequest+Alamofire.swift
+Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/maxvitruk.xcuserdatad/xcschemes/Alamofire.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/maxvitruk.xcuserdatad/xcschemes/Pods-Music-Test.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/maxvitruk.xcuserdatad/xcschemes/Pods-Music-TestTests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/maxvitruk.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/Alamofire/Info.plist
+Pods/Target Support Files/Pods-Music-Test/Info.plist
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-acknowledgements.markdown
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-acknowledgements.plist
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-dummy.m
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-frameworks.sh
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-resources.sh
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-umbrella.h
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test.debug.xcconfig
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test.modulemap
+Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test.release.xcconfig
+Pods/Target Support Files/Pods-Music-TestTests/Info.plist
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests-acknowledgements.plist
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests-dummy.m
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests-frameworks.sh
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests-resources.sh
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests-umbrella.h
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests.debug.xcconfig
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests.modulemap
+Pods/Target Support Files/Pods-Music-TestTests/Pods-Music-TestTests.release.xcconfig

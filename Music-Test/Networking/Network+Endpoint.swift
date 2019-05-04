@@ -27,10 +27,10 @@ extension Network {
     }
     
     public struct TruckRequest : Endpoint {
-        public typealias Target = User
+        public typealias Target = [Track]
         
-        public var url: URL { return URL(string: "https://httpbin.org/post")! }
-        public var method: HTTPMethod { return .post }
+        public var url: URL { return URL(string: "http://lc.playlist.com:3001/tracks/")! }
+        public var method: HTTPMethod { return .get }
         
         public var params: [String : Any]
     }

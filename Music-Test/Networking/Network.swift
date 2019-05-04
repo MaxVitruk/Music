@@ -45,5 +45,20 @@ extension Network {
         
         requests[endpoint.url] = request
     }
+    
+    func requestTracks(_ block : @escaping (Network.Response<[Track]>) -> Void) {
+        let endpoint = TruckRequest(params: [:])
+        
+        if let activeRequest = requests[endpoint.url] {
+            executor.cancel(request: activeRequest)
+        }
+        
+        let request = executor.execute(endpoint: endpoint) { [weak self] result in
+            self?.requests.removeValue(forKey: endpoint.url)
+            block(result)
+        }
+        
+        requests[endpoint.url] = request
+    }
 }
 

@@ -19,6 +19,7 @@
 		920C564B227E079D00DB2930 /* AlamofireExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C564A227E079D00DB2930 /* AlamofireExecutor.swift */; };
 		920C564D227E138600DB2930 /* Network+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C564C227E138600DB2930 /* Network+Endpoint.swift */; };
 		920C5650227E14B800DB2930 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C564F227E14B800DB2930 /* UserCell.swift */; };
+		920C5654227E1E8900DB2930 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5653227E1E8900DB2930 /* Track.swift */; };
 		C7A3939ADD43064D9D55130D /* Pods_Music_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */; };
 		E11932490AA5A5EB800D7047 /* Pods_Music_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399085F34874BFB865A44FCB /* Pods_Music_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		920C564A227E079D00DB2930 /* AlamofireExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireExecutor.swift; sourceTree = "<group>"; };
 		920C564C227E138600DB2930 /* Network+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Endpoint.swift"; sourceTree = "<group>"; };
 		920C564F227E14B800DB2930 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		920C5653227E1E8900DB2930 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				920C5648227E01FA00DB2930 /* User.swift */,
+				920C5653227E1E8900DB2930 /* Track.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				920C5620227DCA2700DB2930 /* ViewController.swift in Sources */,
 				920C5647227DE4CF00DB2930 /* Network+Response.swift in Sources */,
 				920C561E227DCA2700DB2930 /* AppDelegate.swift in Sources */,
+				920C5654227E1E8900DB2930 /* Track.swift in Sources */,
 				920C564B227E079D00DB2930 /* AlamofireExecutor.swift in Sources */,
 				920C5649227E01FA00DB2930 /* User.swift in Sources */,
 				920C5645227DD44600DB2930 /* Network.swift in Sources */,
