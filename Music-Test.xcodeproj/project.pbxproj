@@ -28,6 +28,8 @@
 		920C5661227F44B100DB2930 /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5660227F44B100DB2930 /* CountdownController.swift */; };
 		920C5664227F509600DB2930 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5663227F509600DB2930 /* Support.swift */; };
 		920C5667227F529A00DB2930 /* TableView+AnimatedReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */; };
+		920C5669227F586800DB2930 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5668227F586800DB2930 /* RoundedImageView.swift */; };
+		920C566B227F5F1900DB2930 /* TrackPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C566A227F5F1900DB2930 /* TrackPageController.swift */; };
 		C7A3939ADD43064D9D55130D /* Pods_Music_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */; };
 		E11932490AA5A5EB800D7047 /* Pods_Music_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399085F34874BFB865A44FCB /* Pods_Music_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		920C5660227F44B100DB2930 /* CountdownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
 		920C5663227F509600DB2930 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+AnimatedReload.swift"; sourceTree = "<group>"; };
+		920C5668227F586800DB2930 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		920C566A227F5F1900DB2930 /* TrackPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageController.swift; sourceTree = "<group>"; };
 		B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				920C5660227F44B100DB2930 /* CountdownController.swift */,
+				920C566A227F5F1900DB2930 /* TrackPageController.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				920C5659227F381B00DB2930 /* UITableView+EmptyMessage.swift */,
 				920C565B227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift */,
 				920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */,
+				920C5668227F586800DB2930 /* RoundedImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -389,10 +395,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -414,8 +422,10 @@
 				920C5664227F509600DB2930 /* Support.swift in Sources */,
 				920C564D227E138600DB2930 /* Network+Endpoint.swift in Sources */,
 				920C5620227DCA2700DB2930 /* ViewController.swift in Sources */,
+				920C5669227F586800DB2930 /* RoundedImageView.swift in Sources */,
 				920C5647227DE4CF00DB2930 /* Network+Response.swift in Sources */,
 				920C561E227DCA2700DB2930 /* AppDelegate.swift in Sources */,
+				920C566B227F5F1900DB2930 /* TrackPageController.swift in Sources */,
 				920C5658227E21D900DB2930 /* TrackCell.swift in Sources */,
 				920C5654227E1E8900DB2930 /* Track.swift in Sources */,
 				920C5667227F529A00DB2930 /* TableView+AnimatedReload.swift in Sources */,

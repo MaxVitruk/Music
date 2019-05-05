@@ -6,7 +6,7 @@ target 'Music-Test' do
   use_frameworks!
 
   pod 'Alamofire', '~> 5.0.0-beta.5'
-  # pod 'AlamofireImage', '~> 3.5.2'
+  pod 'SDWebImage', '~> 5.0'
   # Pods for Music-Test
 
   target 'Music-TestTests' do

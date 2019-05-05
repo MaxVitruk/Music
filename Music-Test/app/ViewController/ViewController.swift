@@ -42,6 +42,10 @@ class UserViewController: UITableViewController, TableDataHolder, ErrorHandler {
     }
     
     private func requestData(){
+        if data.isEmpty {
+            tableView.setNoData(reason: .loading)
+        }
+        
         networking.requestUser { [weak self] result in
             switch result {
             case .success(let data):
@@ -68,7 +72,7 @@ class UserViewController: UITableViewController, TableDataHolder, ErrorHandler {
 }
 
 
-//Mark: - Table View Datasource
+//MARK: - Table View Datasource
 extension UserViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = data[indexPath.row]
@@ -83,6 +87,7 @@ extension UserViewController {
     }
 }
 
+//MARK: - CountdownDelegate
 extension UserViewController : CountdownDelegate {
     func tick(_ tick: TimeInterval, percentage : Float) {
         countdownProgress.setProgress(percentage, animated: tick > 0)

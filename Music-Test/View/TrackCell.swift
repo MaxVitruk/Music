@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TrackCell : UITableViewCell {
     @IBOutlet weak var title : UILabel!
@@ -17,5 +18,7 @@ class TrackCell : UITableViewCell {
         title.text = track.title
         artist.text = track.artist
         
+        let albumUrl = URL(string: track.albumArtUrl)
+        albumArt.sd_setImage(with: albumUrl, placeholderImage: nil)
     }
 }

@@ -33,22 +33,16 @@ public typealias Parameters = [String : Any]
 extension Network {
     func requestUser(_ block : @escaping (Network.Response<[User]>) -> Void) {
         let endpoint = UserRequest()
-    
-        if let activeRequest = requests[endpoint.url] {
-            executor.cancel(request: activeRequest)
-        }
-        
-        let request = executor.execute(endpoint: endpoint) { [weak self] result in
-            self?.requests.removeValue(forKey: endpoint.url)
-            block(result)
-        }
-        
-        requests[endpoint.url] = request
+        self.requestAny(endpoint: endpoint, block)
     }
     
-    func requestTracks(_ block : @escaping (Network.Response<[Track]>) -> Void) {
-        let endpoint = TruckRequest(params: [:])
-        
+    func requestTracks(page : Int, limit : Int = 20, _ block : @escaping (Network.Response<[Track]>) -> Void) {
+        let params = ["_page" : page, "_limit" : limit]
+        let endpoint = TruckRequest(params: params)
+        self.requestAny(endpoint: endpoint, block)
+    }
+    
+    private func requestAny<E : Endpoint>(endpoint : E, _ block: @escaping (Network<T>.Response<E.Target>) -> ()) {
         if let activeRequest = requests[endpoint.url] {
             executor.cancel(request: activeRequest)
         }
