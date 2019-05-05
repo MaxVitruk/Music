@@ -38,21 +38,36 @@ extension Network {
     
     func requestTracks(page : Int, limit : Int = 20, _ block : @escaping (Network.Response<[Track]>) -> Void) {
         let params = ["_page" : page, "_limit" : limit]
-        let endpoint = TruckRequest(params: params)
+        let endpoint = AllTrucksRequest(params: params)
         self.requestAny(endpoint: endpoint, block)
     }
     
-    private func requestAny<E : Endpoint>(endpoint : E, _ block: @escaping (Network<T>.Response<E.Target>) -> ()) {
-        if let activeRequest = requests[endpoint.url] {
+    @discardableResult
+    func requestSingleTrack(id : String, _ block : @escaping (Network.Response<Track>) -> Void) -> URL {
+        let endpoint = TruckRequest(params: [:], id: id)
+        return self.requestAny(endpoint: endpoint, block)
+    }
+    
+    func cancelRequest(for url : URL) {
+        if let activeRequest = requests[url] {
             executor.cancel(request: activeRequest)
+            requests.removeValue(forKey: url)
         }
+    }
+    
+    @discardableResult
+    private func requestAny<E : Endpoint>(endpoint : E, _ block: @escaping (Network<T>.Response<E.Target>) -> ()) -> URL {
+        let url = endpoint.url
+        cancelRequest(for: url)
         
         let request = executor.execute(endpoint: endpoint) { [weak self] result in
-            self?.requests.removeValue(forKey: endpoint.url)
+            self?.requests.removeValue(forKey: url)
             block(result)
         }
         
         requests[endpoint.url] = request
+        
+        return url
     }
 }
 

@@ -23,3 +23,9 @@ extension ErrorHandler where Self : TableData {
         }
     }
 }
+
+extension ErrorHandler where Self : UIViewController {
+    func handleError(_ error : Error){
+        showError(error: error, refreshType: .none)
+    }
+}

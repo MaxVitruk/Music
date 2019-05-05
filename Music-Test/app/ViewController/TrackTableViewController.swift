@@ -12,6 +12,8 @@ import SDWebImage
 class TrackTableViewController: UITableViewController, TableDataHolder, ErrorHandler {
     private var predownloadRange : Int { return 3 }
     private var trackCellName : String { return "track_cell" }
+    private var detailsSegue : String { return "segue_push_details" }
+    
     
     typealias Data = Track
     
@@ -25,25 +27,31 @@ class TrackTableViewController: UITableViewController, TableDataHolder, ErrorHan
         }
     }
     
-    var pageController : TrackPageController!
+    var pageController : TrackPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.prefetchDataSource = self
         addActivityIndicator()
-        pageController = TrackPageController()
+        pageController = TrackPageControl()
         pageController.delegate = self
         pageController.requestNext()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        pageController.addObserver(self, forKeyPath: #keyPath(TrackPageController.isLoading), options: [.old, .new], context: nil)
+        pageController.addObserver(self, forKeyPath: #keyPath(TrackPageControl.isLoading), options: [.old, .new], context: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        pageController.removeObserver(self, forKeyPath: #keyPath(TrackPageController.isLoading))
+        pageController.removeObserver(self, forKeyPath: #keyPath(TrackPageControl.isLoading))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SingleTrackViewController, let t = sender as? Track {
+            vc.data = t
+        }
     }
     
     private func requestTracks(page : Int) {
@@ -75,7 +83,7 @@ class TrackTableViewController: UITableViewController, TableDataHolder, ErrorHan
 extension TrackTableViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
-        if keyPath == #keyPath(TrackPageController.isLoading) {
+        if keyPath == #keyPath(TrackPageControl.isLoading) {
             asyncMain { [weak self] in
                 let isLoading = (change?[.newKey] as? Bool) ?? false
                 isLoading ?
@@ -86,6 +94,13 @@ extension TrackTableViewController {
     }
 }
 
+//MARK: - Table View Delegate
+extension TrackTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let track = data[indexPath.row]
+        self.performSegue(withIdentifier: detailsSegue, sender: track)
+    }
+}
 
 //MARK: - Table View Datasource
 extension TrackTableViewController {

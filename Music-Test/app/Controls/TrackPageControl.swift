@@ -13,7 +13,7 @@ protocol TrackPageControllerDelegate : class {
 }
 
 @objc
-class TrackPageController : NSObject {
+class TrackPageControl : NSObject {
     enum PageState {
         case loading(Int)
         case ready(Int)

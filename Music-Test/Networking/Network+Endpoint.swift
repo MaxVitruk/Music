@@ -26,7 +26,7 @@ extension Network {
         public var params: [String : Any] = [:]
     }
     
-    public struct TruckRequest : Endpoint {
+    public struct AllTrucksRequest : Endpoint {
         public typealias Target = [Track]
         
         public var url: URL { return URL(string: "http://lc.playlist.com:3001/tracks/")! }
@@ -34,4 +34,16 @@ extension Network {
         
         public var params: [String : Any]
     }
+    
+    public struct TruckRequest : Endpoint {
+        public typealias Target = Track
+
+        public var url: URL { return URL(string: "http://lc.playlist.com:3001/tracks/\(id)")! }
+        public var method: HTTPMethod { return .get }
+
+        public var params: [String : Any]
+        public var id : String
+    }
+
+    
 }

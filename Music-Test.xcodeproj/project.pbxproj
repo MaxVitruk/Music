@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920C561E227DCA2700DB2930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C561D227DCA2700DB2930 /* AppDelegate.swift */; };
-		920C5620227DCA2700DB2930 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C561F227DCA2700DB2930 /* ViewController.swift */; };
+		920C5620227DCA2700DB2930 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C561F227DCA2700DB2930 /* UserViewController.swift */; };
 		920C5623227DCA2700DB2930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920C5621227DCA2700DB2930 /* Main.storyboard */; };
 		920C5625227DCA2900DB2930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920C5624227DCA2900DB2930 /* Assets.xcassets */; };
 		920C5628227DCA2900DB2930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920C5626227DCA2900DB2930 /* LaunchScreen.storyboard */; };
@@ -29,7 +29,9 @@
 		920C5664227F509600DB2930 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5663227F509600DB2930 /* Support.swift */; };
 		920C5667227F529A00DB2930 /* TableView+AnimatedReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */; };
 		920C5669227F586800DB2930 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5668227F586800DB2930 /* RoundedImageView.swift */; };
-		920C566B227F5F1900DB2930 /* TrackPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C566A227F5F1900DB2930 /* TrackPageController.swift */; };
+		920C566B227F5F1900DB2930 /* TrackPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C566A227F5F1900DB2930 /* TrackPageControl.swift */; };
+		920C566D227F760500DB2930 /* SingleTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C566C227F760500DB2930 /* SingleTrackViewController.swift */; };
+		920C566F227F7A6300DB2930 /* TimeInterval+TrackTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C566E227F7A6300DB2930 /* TimeInterval+TrackTime.swift */; };
 		C7A3939ADD43064D9D55130D /* Pods_Music_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */; };
 		E11932490AA5A5EB800D7047 /* Pods_Music_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399085F34874BFB865A44FCB /* Pods_Music_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +54,7 @@
 		448ECD1731239EBB229DD21E /* Pods-Music-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music-Test/Pods-Music-Test.release.xcconfig"; sourceTree = "<group>"; };
 		920C561A227DCA2700DB2930 /* Music-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		920C561D227DCA2700DB2930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		920C561F227DCA2700DB2930 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		920C561F227DCA2700DB2930 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		920C5622227DCA2700DB2930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		920C5624227DCA2900DB2930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		920C5627227DCA2900DB2930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +78,9 @@
 		920C5663227F509600DB2930 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+AnimatedReload.swift"; sourceTree = "<group>"; };
 		920C5668227F586800DB2930 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
-		920C566A227F5F1900DB2930 /* TrackPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageController.swift; sourceTree = "<group>"; };
+		920C566A227F5F1900DB2930 /* TrackPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPageControl.swift; sourceTree = "<group>"; };
+		920C566C227F760500DB2930 /* SingleTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTrackViewController.swift; sourceTree = "<group>"; };
+		920C566E227F7A6300DB2930 /* TimeInterval+TrackTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+TrackTime.swift"; sourceTree = "<group>"; };
 		B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -196,8 +200,9 @@
 		920C5643227DCAA500DB2930 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				920C561F227DCA2700DB2930 /* ViewController.swift */,
+				920C561F227DCA2700DB2930 /* UserViewController.swift */,
 				920C5655227E219000DB2930 /* TrackTableViewController.swift */,
+				920C566C227F760500DB2930 /* SingleTrackViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -215,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				920C5660227F44B100DB2930 /* CountdownController.swift */,
-				920C566A227F5F1900DB2930 /* TrackPageController.swift */,
+				920C566A227F5F1900DB2930 /* TrackPageControl.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 				920C565B227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift */,
 				920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */,
 				920C5668227F586800DB2930 /* RoundedImageView.swift */,
+				920C566E227F7A6300DB2930 /* TimeInterval+TrackTime.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -418,14 +424,16 @@
 				920C565E227F419B00DB2930 /* ErrorHandler.swift in Sources */,
 				920C565A227F381B00DB2930 /* UITableView+EmptyMessage.swift in Sources */,
 				920C565C227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift in Sources */,
+				920C566F227F7A6300DB2930 /* TimeInterval+TrackTime.swift in Sources */,
+				920C566D227F760500DB2930 /* SingleTrackViewController.swift in Sources */,
 				920C5661227F44B100DB2930 /* CountdownController.swift in Sources */,
 				920C5664227F509600DB2930 /* Support.swift in Sources */,
 				920C564D227E138600DB2930 /* Network+Endpoint.swift in Sources */,
-				920C5620227DCA2700DB2930 /* ViewController.swift in Sources */,
+				920C5620227DCA2700DB2930 /* UserViewController.swift in Sources */,
 				920C5669227F586800DB2930 /* RoundedImageView.swift in Sources */,
 				920C5647227DE4CF00DB2930 /* Network+Response.swift in Sources */,
 				920C561E227DCA2700DB2930 /* AppDelegate.swift in Sources */,
-				920C566B227F5F1900DB2930 /* TrackPageController.swift in Sources */,
+				920C566B227F5F1900DB2930 /* TrackPageControl.swift in Sources */,
 				920C5658227E21D900DB2930 /* TrackCell.swift in Sources */,
 				920C5654227E1E8900DB2930 /* Track.swift in Sources */,
 				920C5667227F529A00DB2930 /* TableView+AnimatedReload.swift in Sources */,

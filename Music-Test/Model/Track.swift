@@ -13,7 +13,7 @@ public struct Track : Codable {
     let albumArtUrl : String
     let artist : String
     let trackId : String
-    let duration : Int
+    let duration : TimeInterval
     
     enum CodingKeys: String, CodingKey {
         case title
