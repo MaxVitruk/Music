@@ -22,6 +22,12 @@
 		920C5654227E1E8900DB2930 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5653227E1E8900DB2930 /* Track.swift */; };
 		920C5656227E219000DB2930 /* TrackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5655227E219000DB2930 /* TrackTableViewController.swift */; };
 		920C5658227E21D900DB2930 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5657227E21D900DB2930 /* TrackCell.swift */; };
+		920C565A227F381B00DB2930 /* UITableView+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5659227F381B00DB2930 /* UITableView+EmptyMessage.swift */; };
+		920C565C227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C565B227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift */; };
+		920C565E227F419B00DB2930 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C565D227F419B00DB2930 /* ErrorHandler.swift */; };
+		920C5661227F44B100DB2930 /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5660227F44B100DB2930 /* CountdownController.swift */; };
+		920C5664227F509600DB2930 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5663227F509600DB2930 /* Support.swift */; };
+		920C5667227F529A00DB2930 /* TableView+AnimatedReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */; };
 		C7A3939ADD43064D9D55130D /* Pods_Music_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */; };
 		E11932490AA5A5EB800D7047 /* Pods_Music_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399085F34874BFB865A44FCB /* Pods_Music_TestTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +67,12 @@
 		920C5653227E1E8900DB2930 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		920C5655227E219000DB2930 /* TrackTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewController.swift; sourceTree = "<group>"; };
 		920C5657227E21D900DB2930 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		920C5659227F381B00DB2930 /* UITableView+EmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyMessage.swift"; sourceTree = "<group>"; };
+		920C565B227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorPresentation.swift"; sourceTree = "<group>"; };
+		920C565D227F419B00DB2930 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		920C5660227F44B100DB2930 /* CountdownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
+		920C5663227F509600DB2930 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+AnimatedReload.swift"; sourceTree = "<group>"; };
 		B60BFF1E2AB11DF3A5547367 /* Pods_Music_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +141,7 @@
 		920C563D227DCA3300DB2930 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				920C5662227F44B800DB2930 /* Controls */,
 				920C5643227DCAA500DB2930 /* ViewController */,
 				920C561D227DCA2700DB2930 /* AppDelegate.swift */,
 			);
@@ -158,6 +171,9 @@
 		920C5640227DCA5600DB2930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				920C5665227F527700DB2930 /* Extension */,
+				920C565D227F419B00DB2930 /* ErrorHandler.swift */,
+				920C5663227F509600DB2930 /* Support.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -189,6 +205,24 @@
 				920C5657227E21D900DB2930 /* TrackCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		920C5662227F44B800DB2930 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				920C5660227F44B100DB2930 /* CountdownController.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		920C5665227F527700DB2930 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				920C5659227F381B00DB2930 /* UITableView+EmptyMessage.swift */,
+				920C565B227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift */,
+				920C5666227F529A00DB2930 /* TableView+AnimatedReload.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D5FC29EDCFD7D99FDD0774F2 /* Frameworks */ = {
@@ -373,12 +407,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				920C5650227E14B800DB2930 /* UserCell.swift in Sources */,
+				920C565E227F419B00DB2930 /* ErrorHandler.swift in Sources */,
+				920C565A227F381B00DB2930 /* UITableView+EmptyMessage.swift in Sources */,
+				920C565C227F3B4A00DB2930 /* UIViewController+ErrorPresentation.swift in Sources */,
+				920C5661227F44B100DB2930 /* CountdownController.swift in Sources */,
+				920C5664227F509600DB2930 /* Support.swift in Sources */,
 				920C564D227E138600DB2930 /* Network+Endpoint.swift in Sources */,
 				920C5620227DCA2700DB2930 /* ViewController.swift in Sources */,
 				920C5647227DE4CF00DB2930 /* Network+Response.swift in Sources */,
 				920C561E227DCA2700DB2930 /* AppDelegate.swift in Sources */,
 				920C5658227E21D900DB2930 /* TrackCell.swift in Sources */,
 				920C5654227E1E8900DB2930 /* Track.swift in Sources */,
+				920C5667227F529A00DB2930 /* TableView+AnimatedReload.swift in Sources */,
 				920C564B227E079D00DB2930 /* AlamofireExecutor.swift in Sources */,
 				920C5656227E219000DB2930 /* TrackTableViewController.swift in Sources */,
 				920C5649227E01FA00DB2930 /* User.swift in Sources */,

@@ -13,7 +13,7 @@ class TrackTableViewController: UITableViewController {
     
     var tracks : [Track] = [] {
         didSet {
-            DispatchQueue.main.async {
+            asyncMain {
                 self.tableView.reloadData()
             }
         }

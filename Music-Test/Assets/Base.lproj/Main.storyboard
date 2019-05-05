@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="39" y="504"/>
         </scene>
-        <!--Item-->
+        <!--Users-->
         <scene sceneID="4uD-r9-MtU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vpm-QS-Ifk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gYY-76-9r3"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="gYY-76-9r3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dte-LD-P8a">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -55,9 +55,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="yjN-p7-Up5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QeR-x4-cZR">
+                                    <rect key="frame" x="20" y="21" width="312" height="2"/>
+                                </progressView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD6-hC-vQ3">
+                                    <rect key="frame" x="352" y="12" width="42" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="42" id="9hR-bf-Nid"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="QeR-x4-cZR" firstAttribute="leading" secondItem="yjN-p7-Up5" secondAttribute="leading" constant="20" id="3QW-Ox-c2x"/>
+                                <constraint firstItem="fD6-hC-vQ3" firstAttribute="top" secondItem="yjN-p7-Up5" secondAttribute="top" constant="12" id="N1Z-ks-tre"/>
+                                <constraint firstAttribute="trailing" secondItem="fD6-hC-vQ3" secondAttribute="trailing" constant="20" id="Tkl-Ko-L0R"/>
+                                <constraint firstItem="fD6-hC-vQ3" firstAttribute="leading" secondItem="QeR-x4-cZR" secondAttribute="trailing" constant="20" id="YAl-5k-ELI"/>
+                                <constraint firstItem="QeR-x4-cZR" firstAttribute="centerY" secondItem="fD6-hC-vQ3" secondAttribute="centerY" id="a8i-C2-acb"/>
+                                <constraint firstItem="QeR-x4-cZR" firstAttribute="centerY" secondItem="yjN-p7-Up5" secondAttribute="centerY" id="xyG-N4-EYG"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="user_cell" rowHeight="88" id="sbM-76-IqT" customClass="UserCell" customModule="Music_Test" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sbM-76-IqT" id="vzp-kg-USu">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="87.5"/>
@@ -96,6 +123,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="PWo-50-FH1"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="vX7-OJ-WL4">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Loading...">
+                                <attributes>
+                                    <font key="NSFont" metaFont="smallSystem"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="countDownLable" destination="fD6-hC-vQ3" id="2eU-HJ-GI2"/>
+                        <outlet property="countdownProgress" destination="QeR-x4-cZR" id="eIq-Zf-ZFb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RT1-CQ-sR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,11 +212,11 @@
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="829.6875"/>
         </scene>
-        <!--Item-->
+        <!--Music-->
         <scene sceneID="HwA-gf-iYe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ajJ-uX-wug" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FKM-PA-R1B"/>
+                    <tabBarItem key="tabBarItem" title="Music" id="FKM-PA-R1B"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="S5y-vA-Zxf">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
